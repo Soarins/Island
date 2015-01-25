@@ -1,0 +1,52 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/screens.rpy", line 175, in script
+    call screen main_menu
+  File "renpy/common/000statements.rpy", line 457, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "game/screens.rpy", line 180, in execute
+    screen main_menu:
+  File "game/screens.rpy", line 188, in execute
+    add "%s.jpg" % (gett())
+TypeError: not all arguments converted during string formatting
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/screens.rpy", line 175, in script
+    call screen main_menu
+  File "E:\1. program\renpy-6.18.3-sdk\renpy\ast.py", line 1635, in execute
+    self.call("execute")
+  File "E:\1. program\renpy-6.18.3-sdk\renpy\ast.py", line 1653, in call
+    renpy.statements.call(method, parsed, *args, **kwargs)
+  File "E:\1. program\renpy-6.18.3-sdk\renpy\statements.py", line 144, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 457, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "E:\1. program\renpy-6.18.3-sdk\renpy\exports.py", line 2311, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+  File "E:\1. program\renpy-6.18.3-sdk\renpy\ui.py", line 247, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "E:\1. program\renpy-6.18.3-sdk\renpy\display\core.py", line 2160, in interact
+    scene_lists.replace_transient()
+  File "E:\1. program\renpy-6.18.3-sdk\renpy\display\core.py", line 669, in replace_transient
+    self.remove(layer, tag)
+  File "E:\1. program\renpy-6.18.3-sdk\renpy\display\core.py", line 943, in remove
+    self.hide_or_replace(layer, remove_index, "hide")
+  File "E:\1. program\renpy-6.18.3-sdk\renpy\display\core.py", line 867, in hide_or_replace
+    d = oldsle.displayable._hide(now - st, now - at, prefix)
+  File "E:\1. program\renpy-6.18.3-sdk\renpy\display\screen.py", line 423, in _hide
+    self.update()
+  File "E:\1. program\renpy-6.18.3-sdk\renpy\display\screen.py", line 555, in update
+    self.screen.function(**self.scope)
+  File "game/screens.rpy", line 180, in execute
+    screen main_menu:
+  File "game/screens.rpy", line 188, in execute
+    add "%s.jpg" % (gett())
+  File "<screen language>", line 188, in <module>
+TypeError: not all arguments converted during string formatting
+
+Windows-post2008Server-6.2.9200
+Ren'Py 6.18.3.761
+Island 1.0
